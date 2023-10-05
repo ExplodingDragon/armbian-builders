@@ -9,3 +9,8 @@ jobs:
       - name: push Current Project
         run: |
           bash -e ./build.sh
+      - name: Upload Armbian image
+        uses: actions/upload-artifact@master
+        with:
+          name: Armbian_firmware
+          path: /tmp/output.tar.bz2
